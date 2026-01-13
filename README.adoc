@@ -1,3 +1,33 @@
+# My Brownfield Project: Enhancing the Spring Data JPA Guide
+
+This is my personal fork of the official Spring `gs-accessing-data-jpa` guide. I have used this project to practice and demonstrate key brownfield development skills: analyzing an existing codebase, adding new features, and refactoring for a better architecture.
+
+---
+
+## My Contributions and Enhancements
+
+### Ticket #1: Refactor to a RESTful Web Service
+*   **Initial State:** The original project was a command-line application that ran once, printed to the console, and shut down.
+*   **My Work:**
+    *   I added the `spring-boot-starter-web` dependency to transform the project into a web application.
+    *   I refactored the architecture to use a professional, layered structure by creating a **Service Layer** (`CustomerService`) and a **Controller Layer** (`CustomerController`).
+    *   I created REST endpoints (`GET /api/customers`, `POST /api/customers`) to expose the customer data over HTTP.
+    *   I reconfigured the project to use a **PostgreSQL** database instead of the default in-memory H2 database.
+*   **Skills Demonstrated:** Code Analysis, Architectural Refactoring, API Design, Dependency Management.
+
+### Ticket #2: Add Role and Search Feature
+*   **Initial State:** The `Customer` model was missing a `role` field, and there was no way to search for customers.
+*   **My Work:**
+    *   I modified the `Customer` entity to include a new `role` field and relied on `ddl-auto` to migrate the database schema.
+    *   I implemented a **Spring Data Query Method** (`findByLastName`) in the `CustomerRepository` to enable efficient searching.
+    *   I created a new service method and a new controller endpoint (`GET /api/customers/search`) that uses a `@RequestParam` to accept the search query.
+*   **Skills Demonstrated:** Entity Modification, Database Migration, Custom Repository Queries, API Endpoint Extension.
+
+---
+*(The original content of the README file should start below this line)*
+
+
+
 :toc:
 :tabsize: 4
 :icons: font
