@@ -1,0 +1,12 @@
+# Compiled output
+/target/
+
+# IDE files
+.idea/
+*.iml
+
+# Log files
+*.log
+
+# Sensitive configuration - DO NOT COMMIT
+src/main/resources/application.properties
